@@ -4,4 +4,4 @@ let age = 20;
 if (age > 10) {
     age = +10;
 }
-//# sourceMappingURL=0527.js.map
+//# sourceMappingURL=index2.js.map
