@@ -119,8 +119,10 @@ let employ3: {
   readonly id: number;
   name: string;
   retire: (date: Date) => void;
-} = { id: 1,
-     name: "moody",
-     retire: (date: Date){
-        console.log(date)
-     } };
+} = {
+  id: 1,
+  name: "moody",
+  retire: (date: Date) => {
+    console.log(date);
+  },
+};
