@@ -58,22 +58,3 @@ name: 'Mosh',
 retire: (date: Date) => {},
 };
 
-Compiler Options
-Option
-- noImplicitAny
-When enabled, the compiler will warn you about variables that are inferred with the any type. You’ll then have to explicitly annotate them with any if you have a reason to do so.
-
-- noImplicitReturns
-When enabled, the compiler will check all code paths in a function to ensure they return a value.
-
-- noUnusedLocals
-When enabled, the compiler will report unused local variables.
-
-- noUnusedParameters
-When enabled, the compiler will report unused parameters.
-
-Strict Compiler Option
-As I explained in the previous lesson, the strict option enables a range of type-checking behavior. The exact settings affected by this are dependent on the version of the TypeScript compiler you’re using. The newer versions may introduce additional stricter checking under this flag so upgrading the TypeScript compiler may result in new errors.
-You can see the exact options enabled by turning on the strict setting here:
-https://www.typescriptlang.org/tsconfig#strict
-You’ll gradually get familiar with these settings as we go through the course.

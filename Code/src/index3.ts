@@ -93,7 +93,8 @@ function calculateTax4(income: number, taxYear?: number): number {
   return income * 1.2;
 }
 
-calculateTax4(10_000); // we can add taxYear to be optional so we can pass one argument
+// we can add taxYear to be optional so we can pass one argument
+calculateTax4(10_000);
 
 // better way
 function calculateTax5(income: number, taxYear = 2022): number {
