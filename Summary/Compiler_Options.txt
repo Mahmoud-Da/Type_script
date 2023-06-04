@@ -25,3 +25,8 @@ When enabled, null and undefined will not be acceptable values for variables
 
 - allowUnreachableCode
 When set the false, reports error about unreachable code.
+
+- noImplicitOverride
+When enabled, then compiler will warn us if we try to override
+ a method without using the override keyword.
+ 
