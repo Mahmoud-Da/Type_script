@@ -53,4 +53,25 @@ let ride = {
     speed2: speed !== null ? speed : 30,
     speed3: speed !== null && speed !== void 0 ? speed : 30,
 };
+let phone = document.getElementById("phone");
+let phone1 = document.getElementById("phone");
+phone1.value;
+let phone2 = document.getElementById("phone");
+function render(document) {
+    document.move();
+    document.fly();
+}
+function render1(document) {
+    if (typeof document === "string") {
+        document.toLocaleUpperCase();
+    }
+}
+function processEvent() {
+    while (true) {
+        console.log("hi");
+    }
+}
+function reject(message) {
+    throw new Error(message);
+}
 //# sourceMappingURL=index4.js.map

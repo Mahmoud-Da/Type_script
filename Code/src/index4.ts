@@ -103,3 +103,39 @@ let ride = {
 };
 
 // Type Assertion
+// to tell the compiler that we know more of the type of this object (not convert)
+let phone = document.getElementById("phone");
+// HTML Element is class in JS define any html element (parent class)
+// phone. we can't see the value property
+let phone1 = document.getElementById("phone") as HTMLInputElement;
+phone1.value;
+// or another way
+let phone2 = <HTMLInputElement>document.getElementById("phone");
+
+// Unkown Type
+function render(document: any) {
+  document.move();
+  document.fly();
+}
+
+function render1(document: unknown) {
+  if (typeof document === "string") {
+    document.toLocaleUpperCase();
+  }
+  // document.fly();  we got error
+}
+
+// Never Type
+function processEvent(): never {
+  while (true) {
+    console.log("hi");
+  }
+}
+
+// processEvent();
+// console.log("h"); we will have an error that this code not reachble
+
+// another example
+function reject(message: string): never {
+  throw new Error(message);
+}

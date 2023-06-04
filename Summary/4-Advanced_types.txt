@@ -1,28 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Summary
 - Using a type alias we can create a new name (alias) for a type.
  We often use type aliases to create custom types.
