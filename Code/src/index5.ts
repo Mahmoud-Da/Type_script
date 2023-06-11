@@ -124,6 +124,108 @@ class Person {
 
 class Student extends Person {
   override get fullName() {
-    return "Student" + super.fullName;
+    return "Student " + super.fullName;
+  }
+}
+
+class Teacher extends Person {
+  override get fullName() {
+    return "Professor " + super.fullName;
+  }
+}
+
+// polumorphism (poly => many,  morphism => form)
+// open closed principel (Classes should be open for extension and cloesd for modification)
+class Principle extends Person {
+  override get fullName() {
+    return "Principle " + super.fullName;
+  }
+}
+
+function printNames(people: Person[]) {
+  for (let person of people) console.log(person.fullName);
+}
+printNames([
+  new Student(1, "Mosh", "Hmadani"),
+  new Teacher(1, "Lili", "Hanem"),
+  new Principle(1, "Aboabdo", "Da"),
+]);
+
+// Private vs Protected Members
+// Protected members are inherited and can we be used in the child class
+// Private members are not inherited so we can't use it the child class
+// don't use Protected members unless u really know what you are doing
+class Car {
+  get Color() {
+    return console.log("red");
+  }
+
+  // private start() {
+  //   return console.log("start");
+  // }
+
+  protected stop() {
+    return console.log("start");
+  }
+}
+class Bmw extends Car {
+  override get Color() {
+    return console.log("green");
+  }
+
+  // we can't acess start method (private)
+
+  // we can acess stop method (protected)
+  break() {
+    this.stop();
+  }
+}
+
+// Abstract Classes and Methods
+// Abstract Classes/Methods (uncooked Classes/Methods [not ready])
+// Abstract Classes/Methods to not able to create instece form it
+// Abstract methods only can be exist inside an Abstact Classes
+abstract class Shape {
+  constructor(public color: string) {}
+
+  abstract render(): void;
+}
+// we can't create an instance
+// let circle = new Shape("red");
+
+// we can't call a method
+// render();
+
+// Interfaces
+// to define the shape of objects
+
+abstract class Calender {
+  constructor(public name: string) {}
+
+  abstract addEvent(): void;
+  abstract removeEvent(): void;
+}
+
+interface Calender {
+  name: string;
+  addEvent1(): void;
+}
+
+//  we can extend the same as classes
+interface CloudCalender extends Calender {
+  sync(): void;
+}
+
+// hover in class name (GoogleCloud) and press cmd + . to auto implement
+class GoogleCloud implements Calender {
+  constructor(public name: string) {}
+  addEvent(): void {
+    throw new Error("Method not implemented.");
+  }
+  removeEvent(): void {
+    throw new Error("Method not implemented.");
+  }
+  addEvent1(): void {
+    throw new Error("Method not implemented.");
   }
 }

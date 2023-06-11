@@ -68,7 +68,66 @@ class Person {
 }
 class Student extends Person {
     get fullName() {
-        return "Student" + super.fullName;
+        return "Student " + super.fullName;
+    }
+}
+class Teacher extends Person {
+    get fullName() {
+        return "Professor " + super.fullName;
+    }
+}
+class Principle extends Person {
+    get fullName() {
+        return "Principle " + super.fullName;
+    }
+}
+function printNames(people) {
+    for (let person of people)
+        console.log(person.fullName);
+}
+printNames([
+    new Student(1, "Mosh", "Hmadani"),
+    new Teacher(1, "Lili", "Hanem"),
+    new Principle(1, "Aboabdo", "Da"),
+]);
+class Car {
+    get Color() {
+        return console.log("red");
+    }
+    stop() {
+        return console.log("start");
+    }
+}
+class Bmw extends Car {
+    get Color() {
+        return console.log("green");
+    }
+    break() {
+        this.stop();
+    }
+}
+class Shape {
+    constructor(color) {
+        this.color = color;
+    }
+}
+class Calender {
+    constructor(name) {
+        this.name = name;
+    }
+}
+class GoogleCloud {
+    constructor(name) {
+        this.name = name;
+    }
+    addEvent() {
+        throw new Error("Method not implemented.");
+    }
+    removeEvent() {
+        throw new Error("Method not implemented.");
+    }
+    addEvent1() {
+        throw new Error("Method not implemented.");
     }
 }
 //# sourceMappingURL=index5.js.map
