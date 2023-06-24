@@ -30,3 +30,8 @@ When set the false, reports error about unreachable code.
 When enabled, then compiler will warn us if we try to override
  a method without using the override keyword.
  
+- allowJs
+To include JavaScript code in a TypeScript project, we need to enable the allowJs setting in tsconfig.
+
+- checkJS
+enable type checking for JavaScript
