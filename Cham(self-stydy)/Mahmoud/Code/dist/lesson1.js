@@ -1,4 +1,5 @@
 "use strict";
-// 課題
 let test = "dodo";
+console.log(test);
+let test1 = 1;
 console.log(test);

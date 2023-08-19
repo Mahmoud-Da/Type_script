@@ -19,3 +19,4 @@ let i = "dodo"; //=> コードの読まれ方： 一回書いたコード「JS�
 // 3- tsc -v (check version)　チックする
 // (tsc =>  Type Script Compiler)
 // 4- tsc --init   ターミナルにうつ
+// TypeScriptの実行方法： tsc && node lesson1.js

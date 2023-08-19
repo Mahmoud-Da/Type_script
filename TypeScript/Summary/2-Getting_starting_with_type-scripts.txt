@@ -83,3 +83,17 @@ Install Type_script:
 (i => install, -g installing globally)
 3- tsc -v (check version)
 (tsc =>  Type Script Compiler)
+
+
+4- run Type-script
+1- compile
+- one file:
+tsc filename.ts    ex: => (tsc 0527.ts)
+- all files:
+tsc
+
+2- run code 
+node filename.js ex: => (node 0527.js)
+
+3- complie and run code
+tsc && node 0527.js
