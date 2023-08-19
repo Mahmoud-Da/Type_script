@@ -2,7 +2,7 @@
 
 Organize the Essentials of TypeScript
 
-##### Install Type_script:
+### Install Type_script:
 
 1- nodejs.org
 2- npm i -g typescript  
@@ -10,11 +10,11 @@ Organize the Essentials of TypeScript
 3- tsc -v (check version)
 (tsc => Type Script Compiler)
 
-##### create configure file for typescript compiler:
+### create configure file for typescript compiler:
 
 tsc --init
 
-##### run Type-script
+### run Type-script
 
 1- compile
 
