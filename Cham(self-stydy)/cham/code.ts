@@ -34,35 +34,41 @@
     // "downlevelIteration": true,            /* Provide full support for iterables in 'for-of', spread, and destructuring when targeting 'ES5' or 'ES3'*/
                                               /*・「ES5」または「ES3」をターゲットとする場合、「for-of」、スプレッド、および構造化におけるイテラブルの完全なサポートを提供する。. */
     // "isolatedModules": true,               /* Transpile each file as a separate module (similar to 'ts.transpileModule')
-                                              /*各ファイルを個別のモジュールとしてトランスパイルします (「ts.transpileModule」と同様). */
+                                              /* 各ファイルを個別のモジュールとしてトランスパイルします (「ts.transpileModule」と同様). */
 
-    /* Strict Type-Checking Options */
-    "strict": true,                           /* Enable all strict type-checking options. */
-    // "noImplicitAny": true,                 /* Raise error on expressions and declarations with an implied 'any' type. */
-    // "strictNullChecks": true,              /* Enable strict null checks. */
-    // "strictFunctionTypes": true,           /* Enable strict checking of function types. */
-    // "strictBindCallApply": true,           /* Enable strict 'bind', 'call', and 'apply' methods on functions. */
-    // "strictPropertyInitialization": true,  /* Enable strict checking of property initialization in classes. */
-    // "noImplicitThis": true,                /* Raise error on 'this' expressions with an implied 'any' type. */
-    // "alwaysStrict": true,                  /* Parse in strict mode and emit "use strict" for each source file. */
+    /*  Strict Type-Checking Options・厳密な型チェックのオプション　*/
+    "strict": true,                           /* Enable all strict type-checking options・すべての厳密な型チェック オプションを有効にする. */
+    // "noImplicitAny": true,                 /* Raise error on expressions and declarations with an implied 'any' type.*/
+                                              /* すべての厳密な型チェック オプションを有効にする*/
+    // "strictNullChecks": true,              /* Enable strict null checks・厳密な null チェックを有効にする. */
+    // "strictFunctionTypes": true,           /* Enable strict checking of function types・関数タイプの厳密なチェックを有効にする. */
+    // "strictBindCallApply": true,           /* Enable strict 'bind', 'call', and 'apply' methods on functions・関数で厳密な 'bind'、'call'、および 'apply' メソッドを有効にする. */
+    // "strictPropertyInitialization": true,  /* Enable strict checking of property initialization in classes・クラス内のプロパティ初期化の厳密なチェックを有効にする. */
+    // "noImplicitThis": true,                /* Raise error on 'this' expressions with an implied 'any' type・暗黙の「any」型を持つ「this」式でエラーを発生させる. */
+    // "alwaysStrict": true,                  /* Parse in strict mode and emit "use strict" for each source file・strict モードで解析し、ソース ファイルごとに「use strict」を出力する. */
 
-    /* Additional Checks */
-    // "noUnusedLocals": true,                /* Report errors on unused locals. */
-    // "noUnusedParameters": true,            /* Report errors on unused parameters. */
-    // "noImplicitReturns": true,             /* Report error when not all code paths in function return a value. */
-    // "noFallthroughCasesInSwitch": true,    /* Report errors for fallthrough cases in switch statement. */
+    /* Additional Checks・追加のチェック */
+    // "noUnusedLocals": true,                /* Report errors on unused locals・未使用のローカルに関するエラーを報告する. */
+    // "noUnusedParameters": true,            /* Report errors on unused parameters・未使用のパラメータに関するエラーを報告する. */
+    // "noImplicitReturns": true,             /* Report error when not all code paths in function return a value・関数内のすべてのコード パスが値を返さない場合にエラーを報告する. */
+    // "noFallthroughCasesInSwitch": true,    /* Report errors for fallthrough cases in switch statement・switch ステートメントのフォールスルー ケースのエラーを報告する. */
 
-    /* Module Resolution Options */
-    // "moduleResolution": "node",            /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */
-    // "baseUrl": "./",                       /* Base directory to resolve non-absolute module names. */
-    // "paths": {},                           /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
-    // "rootDirs": [],                        /* List of root folders whose combined content represents the structure of the project at runtime. */
-    // "typeRoots": [],                       /* List of folders to include type definitions from. */
-    // "types": [],                           /* Type declaration files to be included in compilation. */
-    // "allowSyntheticDefaultImports": true,  /* Allow default imports from modules with no default export. This does not affect code emit, just typechecking. */
-    "esModuleInterop": true,                  /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
-    // "preserveSymlinks": true,              /* Do not resolve the real path of symlinks. */
-    // "allowUmdGlobalAccess": true,          /* Allow accessing UMD globals from modules. */
+    /* Module Resolution Options・モジュール解像度オプション */
+    // "moduleResolution": "node",            /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6).
+                                              /* モジュール解決戦略を指定します: 'node' (Node.js) または 'classic' (TypeScript 1.6 以前) */
+    // "baseUrl": "./",                       /* Base directory to resolve non-absolute module names・非絶対モジュール名を解決するためのベース ディレクトリ. */
+    // "paths": {},                           /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'.*/
+                                              /*「baseUrl」を基準とした相対的な場所を検索するためにインポートを再マップする一連のエントリ */
+    // "rootDirs": [],                        /* List of root folders whose combined content represents the structure of the project at runtime. 
+                                              /* 結合されたコンテンツが実行時のプロジェクトの構造を表すルート フォルダーのリスト。*/
+    // "typeRoots": [],                       /* List of folders to include type definitions from・タイプ定義を含めるフォルダーのリスト. */
+    // "types": [],                           /* Type declaration files to be included in compilation・コンパイルに含める型宣言ファイル. */
+    // "allowSyntheticDefaultImports": true,  /* Allow default imports from modules with no default export. This does not affect code emit, just typechecking.
+                                              /* デフォルトのエクスポートがないモジュールからのデフォルトのインポートを許可します。 これはコードの出力には影響せず、型チェックのみに影響する*/
+    "esModuleInterop": true,                  /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. 
+                                              /* すべてのインポートの名前空間オブジェクトの作成を通じて、CommonJS モジュールと ES モジュール間の出力の相互運用性を有効にします。 「allowSyntheticDefaultImports」を意味する*/
+    // "preserveSymlinks": true,              /* Do not resolve the real path of symlinks・シンボリックリンクの実際のパスを解決しない. */
+    // "allowUmdGlobalAccess": true,          /* Allow accessing UMD globals from modules・モジュールから UMD グローバルへのアクセスを許可する. */
 
     /* Source Map Options */
     // "sourceRoot": "",                      /* Specify the location where debugger should locate TypeScript files instead of source locations. */
