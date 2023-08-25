@@ -8,6 +8,18 @@
     //     公式のtsconfig.jsonのドキュメント: https://www.typescriptlang.org/tsconfig
 
     /*Project*/
+    //  "incremental": true,                             /* Save .tsbuildinfo files to allow for incremental compilation of projects.*/
+                                                         /* .tsbuildinfo ファイルを保存して、プロジェクトの増分コンパイルを可能にする。 */
+    // "composite": true,                                /* Enable constraints that allow a TypeScript project to be used with project references. */
+                                                         /* TypeScript プロジェクトをプロジェクト参照とともに使用できるようにする制約を有効にする。 */
+    // "tsBuildInfoFile": "./.tsbuildinfo",              /* Specify the path to .tsbuildinfo incremental compilation file. */
+                                                         /* .tsbuildinfo インクリメンタル コンパイル ファイルへのパスを指定する。*/
+    // "disableSourceOfProjectReferenceRedirect": true,  /* Disable preferring source files instead of declaration files when referencing composite projects. */
+                                                         /* 複合プロジェクトを参照するときに、宣言ファイルではなくソース ファイルを優先することを無効にする。*/
+    // "disableSolutionSearching": true,                 /* Opt a project out of multi-project reference checking when editing. */
+                                                         /* 編集時にマルチプロジェクト参照チェックからプロジェクトをオプトアウトする。*/
+    // "disableReferencedProjectLoad": true,             /* Reduce the number of projects loaded automatically by TypeScript. */
+                                                         /* TypeScript によって自動的に読み込まれるプロジェクトの数を減らす。*/
 
     /*option オプション*/
 
@@ -53,35 +65,39 @@
     // "noImplicitReturns": true,             /* Report error when not all code paths in function return a value・関数内のすべてのコード パスが値を返さない場合にエラーを報告する. */
     // "noFallthroughCasesInSwitch": true,    /* Report errors for fallthrough cases in switch statement・switch ステートメントのフォールスルー ケースのエラーを報告する. */
 
-    /* Module Resolution Options・モジュール解像度オプション */
+    /*  Module Resolution Options ・モジュール解像度オプション */
     // "moduleResolution": "node",            /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6).
                                               /* モジュール解決戦略を指定します: 'node' (Node.js) または 'classic' (TypeScript 1.6 以前) */
     // "baseUrl": "./",                       /* Base directory to resolve non-absolute module names・非絶対モジュール名を解決するためのベース ディレクトリ. */
     // "paths": {},                           /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'.*/
                                               /*「baseUrl」を基準とした相対的な場所を検索するためにインポートを再マップする一連のエントリ */
-    // "rootDirs": [],                        /* List of root folders whose combined content represents the structure of the project at runtime. 
+    // "rootDirs": [],                        /* List of root folders whose combined content represents the structure of the project at runtime.*/
                                               /* 結合されたコンテンツが実行時のプロジェクトの構造を表すルート フォルダーのリスト。*/
     // "typeRoots": [],                       /* List of folders to include type definitions from・タイプ定義を含めるフォルダーのリスト. */
     // "types": [],                           /* Type declaration files to be included in compilation・コンパイルに含める型宣言ファイル. */
     // "allowSyntheticDefaultImports": true,  /* Allow default imports from modules with no default export. This does not affect code emit, just typechecking.
                                               /* デフォルトのエクスポートがないモジュールからのデフォルトのインポートを許可します。 これはコードの出力には影響せず、型チェックのみに影響する*/
-    "esModuleInterop": true,                  /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. 
+    "esModuleInterop": true,                  /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'.*/
                                               /* すべてのインポートの名前空間オブジェクトの作成を通じて、CommonJS モジュールと ES モジュール間の出力の相互運用性を有効にします。 「allowSyntheticDefaultImports」を意味する*/
     // "preserveSymlinks": true,              /* Do not resolve the real path of symlinks・シンボリックリンクの実際のパスを解決しない. */
     // "allowUmdGlobalAccess": true,          /* Allow accessing UMD globals from modules・モジュールから UMD グローバルへのアクセスを許可する. */
 
-    /* Source Map Options */
-    // "sourceRoot": "",                      /* Specify the location where debugger should locate TypeScript files instead of source locations. */
-    // "mapRoot": "",                         /* Specify the location where debugger should locate map files instead of generated locations. */
-    // "inlineSourceMap": true,               /* Emit a single file with source maps instead of having a separate file. */
-    // "inlineSources": true,                 /* Emit the source alongside the sourcemaps within a single file; requires '--inlineSourceMap' or '--sourceMap' to be set. */
+    /* Source Map Options ・　ソースマップのオプション*/
+    // "sourceRoot": "",                      /* Specify the location where debugger should locate TypeScript files instead of source locations.*/
+                                              /* デバッガーがソースの場所ではなく TypeScript ファイルを見つける場所を指定する。*/
+    // "mapRoot": "",                         /* Specify the location where debugger should locate map files instead of generated locations.*/
+                                              /* デバッガーが生成された場所ではなくマップ ファイルを検索する場所を指定する。*/
+    // "inlineSourceMap": true,               /* Emit a single file with source maps instead of having a separate file.*/
+                                              /* 別個のファイルを用意するのではなく、ソース マップを含む単一のファイルを出力する。*/
+    // "inlineSources": true,                 /* Emit the source alongside the sourcemaps within a single file; requires '--inlineSourceMap' or '--sourceMap' to be set.*/
+                                              /* 単一のファイル内でソースマップとともにソースを出力します。 「--inlineSourceMap」または「--sourceMap」を設定する必要がある。*/
 
-    /* Experimental Options */
-    // "experimentalDecorators": true,        /* Enables experimental support for ES7 decorators. */
-    // "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
+    /* Experimental Options ・　実験的なオプション*/
+    // "experimentalDecorators": true,        /* Enables experimental support for ES7 decorators. ES7 デコレータの実験的サポートを有効にする。*/
+    // "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators.　デコレータの型メタデータの出力の実験的サポートを有効にする。 */
 
-    /* Advanced Options */
-    "forceConsistentCasingInFileNames": true  /* Disallow inconsistently-cased references to the same file. */
+    /* Advanced Options ・　高度なオプション　*/
+    "forceConsistentCasingInFileNames": true  /* Disallow inconsistently-cased references to the same file.同じファイルへの大文字と小文字が一致しない参照を禁止する。 */
 
     /* files*/
       //コンパイルするファイルを直接指定する. includeやexcludeと違ってワイルドカードを使用できない。
