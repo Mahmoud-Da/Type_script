@@ -3,7 +3,7 @@
     /* Visit https://aka.ms/tsconfig to read more about this file */
 
     /* Projects */
-    "incremental": true,
+    "incremental": true /* インクリメンタルコンパイルを有効にする */,
     "composite": true,
     "tsBuildInfoFile": "./.tsbuildinfo",
     "disableSourceOfProjectReferenceRedirect": true,
@@ -11,8 +11,8 @@
     "disableReferencedProjectLoad": true,
 
     /* Language and Environment */
-    "target": "es2016",
-    "lib": [],
+    "target": "es2016" /*どのバージョンでjsを出力する. 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019' or 'ESNEXT',*/,
+    "lib": [] /*コンパイルする際に使用する組み込みライブラリを指定する。*/,
     "jsx": "preserve",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
@@ -25,7 +25,7 @@
     "moduleDetection": "auto",
 
     /* Modules */
-    "module": "commonjs",
+    "module": "commonjs" /*出力するjsのモジュールの仕組みとして何を使用するかを指定する。'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'.*/,
     "rootDir": "./src",
     "moduleResolution": "node10",
     "baseUrl": "./",
@@ -43,7 +43,7 @@
     "allowArbitraryExtensions": true,
     "noResolve": true,
 
-    /* JavaScript Support */
+    /* JavaScript Support JavaScript のサポート*/
     "allowJs": true /* Allow JavaScript files to be a part of your program. Use the 'checkJS' option to get errors from these files. */,
     "checkJs": true /* Enable error reporting in type-checked JavaScript files. */,
     "maxNodeModuleJsDepth": 1 /* Specify the maximum folder depth used for checking JavaScript files from 'node_modules'. Only applicable with 'allowJs'. */,
@@ -55,7 +55,7 @@
     "sourceMap": true,
     "inlineSourceMap": true,
     "outFile": "./",
-    "outDir": "./dist",
+    "outDir": "./dist" /*tsファイルのディレクトリ構成をそのままに保ちつつ、指定したディレクトリにjsファイルを作成する。*/,
     "removeComments": true,
     "noEmit": true,
     "importHelpers": true,
