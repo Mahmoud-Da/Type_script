@@ -65,3 +65,36 @@ function calculateTax(income) {
     return income * 1.2;
 }
 console.log(calculateTax(3500000));
+function calculateTax1() { }
+function calculateTax2(income) {
+    return income * 1.2;
+}
+function calculateTax3(income, taxYear) {
+    if (taxYear < 2022) {
+        return income * 1.2;
+    }
+    return income * 1.2;
+}
+calculateTax3(10323, 23);
+function calculateTax4(income, taxYear) {
+    if ((taxYear || 2022) < 2022) {
+        return income * 1.2;
+    }
+    return income * 1.2;
+}
+calculateTax4(10323);
+function calculateTax5(income, taxYear = 2022) {
+    if (taxYear < 2022) {
+        return income * 1.2;
+    }
+    return income * 1.2;
+}
+calculateTax5(10000);
+let employ = { id: 1 };
+let employ2 = {
+    id: 1,
+    name: "hana",
+    retire: (date) => {
+        console.log(date);
+    },
+};
