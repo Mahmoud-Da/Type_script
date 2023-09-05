@@ -46,8 +46,18 @@ const Example = () => {
 
 export default Example;
 
-// - 共用体型を使用すると、変数を許可できます
-//   多くのタイプ (例: 数値 | 文字列) のうちの 1 つを受け取ります。
+/* - Union Type ユニオン型を使用すると、変数を許可できる。
+      多くのタイプ (例: 数値 | 文字列) のうちの 1 つを受け取ります。*/
+
+type List = number | string[];
+
+const maybeUserId: string | null = localStorage.getItem("userId");
+
+const userId: string = maybeUserId; // nullかもしれないので、代入できない。
+
+if (typeof maybeUserId === "string") {
+  const userId: string = maybeUserId; // この分岐内では文字列型に絞り込まれるため、代入できる。
+}
 
 // - 交差タイプを使用すると、複数のタイプを 1 つに組み合わせることができます
 //   (例: ドラッグ可能およびサイズ変更可能)。
