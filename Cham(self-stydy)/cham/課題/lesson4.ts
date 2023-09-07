@@ -78,8 +78,25 @@ const p: ThreeDimensionalPoint = {
   z: 2,
 };
 
-// - オプションのチェーンを使用する (?.)
-// コードを簡素化し、null チェックの必要性を取り除くことができます。
+/* - オプショナルチェーンを使用する (?.)
+       コードを簡素化し、null チェックの必要性を取り除くことができる。*/
+const book1s = undefined;
+const title1 = book1s?.[0];
+console.log(title1);
+
+const book2s = ["サバイバルTypeScript"];
+const title2 = book2s?.[0];
+console.log(title2);
+
+const book1 = undefined;
+const authorEmail1 = book1?.author1?.email;
+console.log(authorEmail1);
+// undefined
+
+const book2 = { author2: { email: "alice@example.com" } };
+const authorEmail2 = book2?.author2?.email;
+console.log(authorEmail2);
+// "alice@example.com"
 
 // - Nullish Coalescing Operator を使用すると、
 // null/未定義オブジェクトを扱う場合のデフォルト値。
