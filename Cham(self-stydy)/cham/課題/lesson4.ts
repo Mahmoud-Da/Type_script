@@ -59,11 +59,44 @@ if (typeof maybeUserId === "string") {
   const userId: string = maybeUserId; // この分岐内では文字列型に絞り込まれるため、代入できる。
 }
 
-// - 交差タイプを使用すると、複数のタイプを 1 つに組み合わせることができます
-//   (例: ドラッグ可能およびサイズ変更可能)。
+/* - Intersection type インターセクション型を使用すると、複数のタイプを 1 つに組み合わせることができます
+       (例: ドラッグ可能およびサイズ変更可能)。*/
+type TwoDimensionalPoint = {
+  x: number;
+  y: number;
+};
 
-// - オプションのチェーンを使用する (?.)
-// コードを簡素化し、null チェックの必要性を取り除くことができます。
+type Z = {
+  z: number;
+};
+
+type ThreeDimensionalPoint = TwoDimensionalPoint & Z;
+
+const p: ThreeDimensionalPoint = {
+  x: 0,
+  y: 1,
+  z: 2,
+};
+
+/* - オプショナルチェーンを使用する (?.)
+       コードを簡素化し、null チェックの必要性を取り除くことができる。*/
+const book1s = undefined;
+const title1 = book1s?.[0];
+console.log(title1);
+
+const book2s = ["サバイバルTypeScript"];
+const title2 = book2s?.[0];
+console.log(title2);
+
+const book1 = undefined;
+const authorEmail1 = book1?.author1?.email;
+console.log(authorEmail1);
+// undefined
+
+const book2 = { author2: { email: "alice@example.com" } };
+const authorEmail2 = book2?.author2?.email;
+console.log(authorEmail2);
+// "alice@example.com"
 
 // - Nullish Coalescing Operator を使用すると、
 // null/未定義オブジェクトを扱う場合のデフォルト値。
