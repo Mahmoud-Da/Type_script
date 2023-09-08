@@ -98,6 +98,13 @@ const authorEmail2 = book2?.author2?.email;
 console.log(authorEmail2);
 // "alice@example.com"
 
+/*リテラル型はリミティブ型の特定の値だけを代入可能にする型を表現できる。*/
+const isTrue: true = true;
+const num1: 123 = 123;
+const str: "foo" = "foo";
+
+let num2: 1 | 2 | 3 = 1;
+
 // - Nullish Coalescing Operator を使用すると、
 // null/未定義オブジェクトを扱う場合のデフォルト値。
 
