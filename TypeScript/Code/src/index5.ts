@@ -133,7 +133,15 @@ class Teacher extends Person {
     return "Professor " + super.fullName;
   }
 }
+// getter and setter using
+// In this code, the fullName property is implemented as
+//  a getter using the get keyword. When you access person.fullName,
+//   the getter is invoked, and it calculates
+//   and returns the full name by combining the firstName and lastName properties.
 
+// This allows you to access fullName like a regular property,
+//  but it provides the benefit of dynamic calculation based on the firstName
+//  and lastName properties of the Person class.
 // polumorphism (poly => many,  morphism => form)
 // open closed principel (Classes should be open for extension and cloesd for modification)
 class Principle extends Person {

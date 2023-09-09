@@ -1,0 +1,6 @@
+disable type checking for the entire file
+//@ts-nocheck
+
+
+disable type checking for the next line only
+// @ts-ignore
