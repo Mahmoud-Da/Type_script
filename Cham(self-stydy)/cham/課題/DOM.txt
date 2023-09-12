@@ -81,5 +81,23 @@ APIとは、アプリケーションプログラミングインターフェー�
     *Document Object Model: DOM
 HTMLなどの「ドキュメント」をツリー状の「オブジェクト」の集まりで表現し、操作可能にしたものです。
 DOMツリーには「Documentオブジェクト」からアクセスすることができる。
-    *Documentオブジェクト:
-    *ノード: DOMツリーの各オブジェクト
+    *Documentオブジェクト:　ドキュメント（文書）を操作することができるオブジェクトです。
+    *ノード(Node): DOMツリーの各オブジェクト
+Nodeオブジェクトには、DOMツリーを検索したり操作するためのプロパティやメソッドが用意されておく。
+    オブジェクトの種類：
+        ドキュメントノード：ドキュメント全体を表す（ドキュメントオブジェクト）
+        要素ノード：要素を表すオブジェクト
+        属性ノード：属性を表すオブジェクト
+        テキストノード：テキストを表すオブジェクト
+        コメントノード：コメントを表すオブジェクト
+        空白ノード：テキストノードの一種
+    すぐ上のノードは「親ノード」、すぐ下のノードは「子ノード」、同じレベルにあるノードは「兄弟ノード」
+
+ex:
+console.log(document.lastChild.lastChild.childNodes[1]);
+➞document➞lastChild(html)➞lastChild(body)➞p(1)➞id
+documentから、最後の子ノード「html」の最後の子ノード「body」の、さらに２番目の子ノード「p」にアクセスしてる
+
+console.log(document.lastChild.firstChild.childNodes[1]);
+➞document➞lastChild(html)➞firstChild(head)➞title(1)
+documentから、最後の子ノード「html」の最後の子ノード「head」の、さらに子ノード「title」にアクセスしてる
