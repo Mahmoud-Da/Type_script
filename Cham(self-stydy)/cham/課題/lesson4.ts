@@ -123,7 +123,7 @@ let num2: 1 | 2 | 3 = 1;
 //   私たちはよくこれらを使用して、決して返さない関数や常にエラーをスローする関数に注釈を付けます。
 
 /*null と undefined
-// JavaScriptでは、存在しない値を宣言する方法が2つあります。
+// JavaScriptでは、存在しない値を宣言する方法が2つある。
 // TypeScriptでは、optionalやnullableな値を宣言する
 
 // JavaScriptの基本型である
@@ -139,45 +139,41 @@ const searchResults = {
   audio: { name: "LEGO Movie Soundtrack" },
 };
 
-// undefinedを使わない理由としては、textが正しく含まれていることを確認できるからです。
+// undefinedを使わない理由は、textが正しく含まれていることを確認できるからです。
 // もしtextがundefinedの場合、 結果はtextが存在しないときと同じものになる。
 
-// JSON文字列に変換したときに、textがundefinedの場合、textは変換された文字列に含まれません。
+// JSON文字列に変換したときに、textがundefinedの場合、textは変換された文字列に含まれない。
 
 // Strict Null Types
 
-// TypeScript 2.0より前では、undefinedとnullは事実上、型システムから無視されていました。
-// これによって、TypeScriptのコーディング環境は型のないJavaScriptに近づいてしまっていました。
+// TypeScript 2.0より前では、undefinedとnullは事実上、型システムから無視されていた。
+// これによって、TypeScriptのコーディング環境は型のないJavaScriptに近づいてしまっていた。
 
-// バージョン2.0にて、"strictNullChecks"というコンパイラフラグが追加されました。
-// このフラグをオンにすると、undefinedとnullが
-// コードフロー分析を通して対応すべき型として扱われるようになります。
+// バージョン2.0にて、"strictNullChecks"というコンパイラフラグが追加された。
+// このフラグをオンにすると、undefinedとnullがコードフロー分析を通して対応すべき型として扱われるようになる。
 // (より詳細には example:code-flow を参照ください)
 
-// TypeScriptでstrict null checksを有効にしたときの違いの例として
-// 以下の"Potential String"型をホバーしてみる。
+// TypeScriptでstrict null checksを有効にしたときの違いの例として以下の"Potential String"型をホバーしてみる。
 
 type PotentialString = string | undefined | null;
 
-// PotentialString型ではundefinedとnullが切り捨てられています。
-// もし、設定に行きstrictモードを有効にして戻ってくると、
-// PotentialString型がすべての型の交差型になっていることが
-// 確認できます。
+// PotentialString型ではundefinedとnullが切り捨てられている。
+// もし、設定に行きstrictモードを有効にして戻ってくると、PotentialString型がすべての型の交差型になっていることが確認できる。
 
 declare function getID(): PotentialString;
 
 const userID = getID();
 console.log("User Logged in: ", userID.toUpperCase());
 
-// strictモードでは、上記はエラーになります。
+// strictモードでは、上記はエラーになる。
 
 // 型アサーションや非nullアサーション演算子(!)を使うなど
-// TypeScriptに詳細を教える方法はいくつかあります。
+// TypeScriptに詳細を教える方法はいくつかある。
 
 const definitelyString1 = getID() as string;
 const definitelyString2 = getID()!;
 
-// あるいはifを用いて存在を安全に確認することもできます:
+// あるいはifを用いて存在を安全に確認することもできる:
 
 if (userID) {
   console.log(userID);
@@ -187,12 +183,9 @@ if (userID) {
 
 // Void
 
-// voidは値を返さない関数の
-// 戻り値型です。
+// voidは値を返さない関数の戻り値型です。
 
 const voidFunction = () => {};
 const resultOfVoidFunction = voidFunction();
 
-// 実行時にはundefinedであっても、
-// TypeScriptはコンパイルエラーを発生させるために
-// void型を保持します
+// 実行時にはundefinedであっても、TypeScriptはコンパイルエラーを発生させるためにvoid型を保持する。
