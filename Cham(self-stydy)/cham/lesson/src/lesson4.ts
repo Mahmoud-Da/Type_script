@@ -53,7 +53,7 @@ type List = number | string[];
 
 const maybeUserId: string | null = localStorage.getItem("userId");
 
-const userId: string = maybeUserId; // nullかもしれないので、代入できない。
+// const userId: string = maybeUserId; // nullかもしれないので、代入できない。
 
 if (typeof maybeUserId === "string") {
   const userId: string = maybeUserId; // この分岐内では文字列型に絞り込まれるため、代入できる。
@@ -88,9 +88,9 @@ const book2s = ["サバイバルTypeScript"];
 const title2 = book2s?.[0];
 console.log(title2);
 
-const book1 = undefined;
-const authorEmail1 = book1?.author1?.email;
-console.log(authorEmail1);
+// const book1 = undefined;
+// const authorEmail1 = book1?.author1?.email;
+// console.log(authorEmail1);
 // undefined
 
 const book2 = { author2: { email: "alice@example.com" } };
@@ -105,8 +105,7 @@ const str: "foo" = "foo";
 
 let num2: 1 | 2 | 3 = 1;
 
-
-/*Nullable Types
+//Nullable Types
 
 // - Nullish Coalescing Operator を使用すると、
 // null/未定義オブジェクトを扱う場合のデフォルト値。
@@ -122,18 +121,19 @@ let num2: 1 | 2 | 3 = 1;
 // - Never タイプは、決して発生しない値を表します。
 //   私たちはよくこれらを使用して、決して返さない関数や常にエラーをスローする関数に注釈を付けます。
 
-/*null と undefined
+//null と undefined
 // JavaScriptでは、存在しない値を宣言する方法が2つある。
 // TypeScriptでは、optionalやnullableな値を宣言する
 
 // JavaScriptの基本型である
-/* Undefinedは値が見つからないときあるいは設定できない場合です。
+// Undefinedは値が見つからないときあるいは設定できない場合です。
 
-const emptyObj = {};
-const anUndefinedProperty: undefined = emptyObj["anything"];
+//const emptyObj = {};
+//const anUndefinedProperty: undefined = emptyObj["anything"];
 
-/* Nullは値が意図的に欠如していることを意味する。
+// Nullは値が意図的に欠如していることを意味する。
 const searchResults = {
+  //
   video: { name: "LEGO Movie" },
   text: null,
   audio: { name: "LEGO Movie Soundtrack" },
@@ -155,29 +155,29 @@ const searchResults = {
 
 // TypeScriptでstrict null checksを有効にしたときの違いの例として以下の"Potential String"型をホバーしてみる。
 
-type PotentialString = string | undefined | null;
+// type PotentialString = string | undefined | null;
 
-// PotentialString型ではundefinedとnullが切り捨てられている。
-// もし、設定に行きstrictモードを有効にして戻ってくると、PotentialString型がすべての型の交差型になっていることが確認できる。
+// // PotentialString型ではundefinedとnullが切り捨てられている。
+// // もし、設定に行きstrictモードを有効にして戻ってくると、PotentialString型がすべての型の交差型になっていることが確認できる。
 
-declare function getID(): PotentialString;
+// declare function getID(): PotentialString;
 
-const userID = getID();
-console.log("User Logged in: ", userID.toUpperCase());
+// const userID = getID();
+// console.log("User Logged in: ", userID.toUpperCase());
 
-// strictモードでは、上記はエラーになる。
+// // strictモードでは、上記はエラーになる。
 
-// 型アサーションや非nullアサーション演算子(!)を使うなど
-// TypeScriptに詳細を教える方法はいくつかある。
+// // 型アサーションや非nullアサーション演算子(!)を使うなど
+// // TypeScriptに詳細を教える方法はいくつかある。
 
-const definitelyString1 = getID() as string;
-const definitelyString2 = getID()!;
+// const definitelyString1 = getID() as string;
+// const definitelyString2 = getID()!;
 
-// あるいはifを用いて存在を安全に確認することもできる:
+// // あるいはifを用いて存在を安全に確認することもできる:
 
-if (userID) {
-  console.log(userID);
-}
+// if (userID) {
+//   console.log(userID);
+// }
 
 // Optional Properties
 
@@ -185,7 +185,7 @@ if (userID) {
 
 // voidは値を返さない関数の戻り値型です。
 
-const voidFunction = () => {};
-const resultOfVoidFunction = voidFunction();
+// const voidFunction = () => {};
+// const resultOfVoidFunction = voidFunction();
 
-// 実行時にはundefinedであっても、TypeScriptはコンパイルエラーを発生させるためにvoid型を保持する。
+// 実行時にはundefinedであっても、TypeScriptはコンパイルエラーを発生させるためにvoid型を保持する.

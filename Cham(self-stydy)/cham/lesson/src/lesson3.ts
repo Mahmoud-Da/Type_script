@@ -51,7 +51,7 @@ function getData(callback: any) {
 getData("abc"); //TypeError: callback is not a function
 
 function getData1(callback1: unknown) {
-  callback1(); //callback1 is of type unknown
+  // callback1(); //callback1 is of type unknown
 }
 getData1("abc");
 
@@ -92,7 +92,7 @@ let skill: [string, number];
 skill = ["Programming", 5];
 
 let skill1: [string, number];
-skill1 = [5, "Programming"]; //error TS2322: Type 'number' is not assignable to type 'string'.
+// skill1 = [5, "Programming"]; //error TS2322: Type 'number' is not assignable to type 'string'.
 
 /*　object　*/
 let myDog: {

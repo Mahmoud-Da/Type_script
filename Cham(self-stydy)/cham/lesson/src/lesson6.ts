@@ -5,12 +5,12 @@
 class Staff {
   constructor(public number: number, public name: string) {}
 }
-let staff1 = new Staff(5, "Mike");
+let staff5 = new Staff(5, "Mike");
 
 class StringStaff {
   constructor(public number: string, public name: string) {}
 }
-let staff2 = new StringStaff("5", "Mike");
+let staff4 = new StringStaff("5", "Mike");
 
 class NumberStaff {
   constructor(public number: number, public name: number) {}
