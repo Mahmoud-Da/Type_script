@@ -2,7 +2,7 @@
 // 質問: age という変数を宣言し、それをあなたの年齢に設定してください。次に、name という変数を宣言し、それをあなたの名前に設定してください。
 let age: number = 18;
 
-let name: string = "Cham";
+let name1: string = "Cham";
 
 // Exercise 2: 基本的な関数
 // 質問: add という TypeScript 関数を作成し、a と b という二つのパラメータを受け取り、それらの合計を返すようにしてください。
