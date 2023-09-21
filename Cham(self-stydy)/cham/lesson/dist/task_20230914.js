@@ -13,3 +13,18 @@ const person = {
     name: "Cham",
     age: 32,
 };
+function isEven(number) {
+    return number % 2 == 0;
+}
+for (let i = 1; i < 6; i++) {
+    console.log(i);
+}
+class Rectangle {
+    constructor(height, width) {
+        this.height = height;
+        this.width = width;
+    }
+    area() {
+        return this.width * this.height;
+    }
+}
