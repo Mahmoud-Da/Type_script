@@ -1,4 +1,7 @@
 // Cheat Sheet
+// decorators: atrributes that apply to it classes and members
+// and with atrributs we can change how class behaive
+// decorators is fucntion that excute on the run time
 // Class decorators
 function Component(constructor: Function) {
   // Here we have a chance to modify members of // the target class.
