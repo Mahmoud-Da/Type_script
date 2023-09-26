@@ -1,19 +1,19 @@
 // 課題１
 // 偶数かつ 1000 未満 の項を全て足した値を求め，表示させよ
 
-function Lolo(number: number): number {
+function EvenNumber(number: number): number {
   if (number % 2 === 0) {
     return number;
   }
   return 0;
 }
 
-function sumLolo() {
+function SumEvenNumber() {
   let sum: number = 0;
   for (let i = 0; i < 1000; i++) {
-    sum += Lolo(i);
+    sum += EvenNumber(i);
   }
-  console.log(sum);
+  return sum;
 }
 
 // 課題２
