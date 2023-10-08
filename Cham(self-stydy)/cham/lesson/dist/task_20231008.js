@@ -15,10 +15,10 @@ function existsSameValue(string) {
     let array = Array.from(string);
     let check = arrayIsUnique(array, array.length);
     if (check === 1) {
-        console.log(true);
+        return true;
     }
     else {
-        console.log(false);
+        return false;
     }
 }
 existsSameValue("cham");

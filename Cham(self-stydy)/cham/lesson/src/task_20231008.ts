@@ -11,8 +11,8 @@
 
 // Write a program to check if a string has unique characters or not
 
-function existsSameValue(string: string) {
-  function arrayIsUnique(array: string[], size: number) {
+function existsSameValue(string: string): boolean {
+  function arrayIsUnique(array: string[], size: number): number {
     let flag: number = 0;
     for (let i = 0; i < size - 1; ++i) {
       for (let j = i + 1; j < size; ++j) {
@@ -27,9 +27,9 @@ function existsSameValue(string: string) {
   let array: string[] = Array.from(string);
   let check: number = arrayIsUnique(array, array.length);
   if (check === 1) {
-    console.log(true);
+    return true;
   } else {
-    console.log(false);
+    return false;
   }
 }
 
