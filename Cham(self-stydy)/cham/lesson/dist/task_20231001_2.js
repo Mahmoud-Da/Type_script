@@ -17,3 +17,5 @@ function prime(number) {
         }
     }
 }
+prime(5);
+prime(10);
