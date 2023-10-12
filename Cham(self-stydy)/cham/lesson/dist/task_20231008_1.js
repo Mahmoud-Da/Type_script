@@ -2,9 +2,6 @@
 function findLongestWord(string) {
     let array = string.match(/\w[a-z]{0,}/gi);
     if (array === null) {
-        return "401";
-    }
-    if (array === undefined) {
         return "404";
     }
     else {
