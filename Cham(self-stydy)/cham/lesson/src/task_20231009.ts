@@ -4,10 +4,10 @@
 
 // Write a program which takes in a string and count the number of occurrence of a character chosen by the user.
 
-function countLetters(string: string) {
+function countLetters(string: string): number {
   let array: string[] = string.split(" ");
   let newArray: string = array.join("");
-  console.log(newArray.length);
+  return newArray.length;
 }
 
 // test

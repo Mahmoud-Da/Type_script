@@ -2,7 +2,7 @@
 function countLetters(string) {
     let array = string.split(" ");
     let newArray = array.join("");
-    console.log(newArray.length);
+    return newArray.length;
 }
 countLetters("My name is Cham");
 function countString(string) {
