@@ -16,12 +16,10 @@ function liliSearch(name: string): boolean | string {
   }
   let array: RegExpMatchArray = name.match(/\w[a-z]{0,}/gi)!;
   let search: number = array.indexOf("lili");
-  if (search === 0) {
+  if (search !== -1) {
     return true;
   }
-  if (search === 1) {
-    return true;
-  }
+
   return false;
 }
 
