@@ -6,12 +6,10 @@
 // Given a string and a non-negative int n, return a larger string that is n copies of the original string.
 
 function largerString(string: string, number: number): string {
-  if (number <= 0) {
+  if (number <= 0 || typeof number != "number") {
     return "Enter number, please!";
   } else {
-    let length: number = string.length * number;
-    let sub: string = string;
-    return string.padEnd(length, sub);
+    return string.repeat(number);
   }
 }
 

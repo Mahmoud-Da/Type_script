@@ -1,12 +1,10 @@
 "use strict";
 function largerString(string, number) {
-    if (number <= 0) {
+    if (number <= 0 || typeof number != "number") {
         return "Enter number, please!";
     }
     else {
-        let length = string.length * number;
-        let sub = string;
-        return string.padEnd(length, sub);
+        return string.repeat(number);
     }
 }
 largerString("ha", 0);
