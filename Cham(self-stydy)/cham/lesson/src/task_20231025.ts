@@ -21,18 +21,18 @@
 // Print the empty stack initially. Then push the three elements on the stack. After every push display the stack.
 // In the end, pop out the topmost element only once and display the stack.
 
-function numberStack(number: number): unknown {
-  if (!number) {
-    return "数字を記入して下さい。";
-  }
-  let stack: number[] = [];
-  return stack.push(number);
-}
+let stack: number[] = [];
+stack.push(3);
+console.log(stack); // [3]
 
-// test
+stack.push(6);
+console.log(stack); // [3,6]
 
-numberStack(2);
-numberStack(3);
-numberStack(5);
-numberStack(6);
-numberStack(7);
+stack.push(8);
+console.log(stack); // [3,6,8]
+
+stack.pop();
+console.log(stack); //[3,6]
+
+stack.pop();
+console.log(stack); //[3]
