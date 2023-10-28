@@ -7,7 +7,7 @@
 // Write a program that accepts a String from the user as an input and display first two characters of the string entered.
 // If the String is shorter than length 2, display whatever there is and the empty string yields an empty string.
 
-function greeting(string: string): string {
+function show_first_two_char(string: string): string {
   if (!string) {
     return "Enter string here, please!";
   }
@@ -22,7 +22,7 @@ function greeting(string: string): string {
 }
 
 // test
-greeting("");
-greeting("Hello");
-greeting("He");
-greeting("H");
+console.log(show_first_two_char(""));
+console.log(show_first_two_char("Hello"));
+console.log(show_first_two_char("He"));
+console.log(show_first_two_char("H"));
