@@ -12,7 +12,7 @@
 function removeCharacterString(string: string, character: string): string {
   if (
     typeof string != "string" ||
-    typeof string != "string" ||
+    typeof character != "string" ||
     string.length === 0 ||
     character.length === 0
   ) {

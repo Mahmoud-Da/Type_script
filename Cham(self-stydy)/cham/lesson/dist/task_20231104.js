@@ -1,7 +1,7 @@
 "use strict";
 function removeCharacterString(string, character) {
     if (typeof string != "string" ||
-        typeof string != "string" ||
+        typeof character != "string" ||
         string.length === 0 ||
         character.length === 0) {
         return "Enter string here, please!";
