@@ -15,27 +15,19 @@ function sumOddNumber(number: number): number | string {
   if (!number) {
     return "Enter number, please!";
   }
-  function arrayNumber(number: number): number[] {
-    let array: number[] = [];
-    for (let i = 3; i <= number; i++) {
-      for (let j = 0; j < number - 2; j++) {
-        if (i % 2 === 1) {
-          array.push(i);
-          break;
-        }
+  let sum: number = 1;
+  for (let i = 3; i <= number; i++) {
+    if (i % 2 === 1) {
+      sum = sum += i;
+      if (sum === number) {
+        return number;
       }
     }
-    return array;
   }
-  let sum: number = 1;
-  for (let k = 0; k < arrayNumber.length; k++) {
-    number1 = sum += arrayNumber[k];
-  }
-  if (number1 === number) {
-    return number;
-  }
-  return number1;
+  return sum;
 }
 
+// test
+sumOddNumber(1);
 sumOddNumber(10);
 sumOddNumber(64);
