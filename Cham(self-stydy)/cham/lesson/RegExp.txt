@@ -1,0 +1,89 @@
+RegExp 正規表現
+
+RegExpオブジェクトは、テキストをパターンと照合する為に使用する。
+
+regexp = new RegExp(patern[, flags])
+regexp =　/pattern/flags
+　・パターン（正規表現）：引数の「パターン」には一般的な正規表現を指定する。
+　・フラグ（修飾子）：g（全部文字列の照合）、i（大文字、小文字に関わらず照合）,m（multilineも照合）を指定すればOK。
+
+
+正規表現の文法
+　正規表現　　　　　意味
+　　x	              xという文字。
+　　xyz	            x, y, z がこの順番で出現する場合にマッチ。
+　　[xyz]	          x、y、zのいずれか1文字。
+　　[x-z]	          x～zまでのいずれか1文字。
+　　[^xyz]	        x、y、zのいずれでもない任意の1文字
+　　.	              任意の1文字。Line Feed(\n), Carriage Return(\r), Line Separator(\u2028), Paragraph Separator(\u2029) を除く任意の1文字。
+　　abc|xyz	        abc または xyz。
+　　^x	            xで始まる文字列
+　　x$	            xで終わる文字列
+　　x*	            0文字以上のx。最大マッチング。
+　　x+	            1文字以上のx。最大マッチング。
+　　x?	            0文字または1文字のx。最大マッチング。
+　　x{n}	          n個のx。最大マッチング。
+　　x{n,}	          n個以上のx。最大マッチング。
+　　x{n,m}	        n個～m個のx。最大マッチング。
+　　x*?	            0文字以上のA。最少マッチング。
+　　x+?	            1文字以上のA。最少マッチング。
+　　x??	            0文字または1文字のx。最少マッチング。
+　　x{n}?	          n個のx。最少マッチング。
+　　x{n,}?	        n個以上のx。最少マッチング。
+　　x{n,m}?	        n個～m個のx。最少マッチング。
+　　[\b]	          バックスペース
+　　(?:x)	          xという文字。ただし、$1...$n の参照から除外される。
+　　x(?=y)	        x に続いて y が現れる場合、x にマッチ
+　　x(?!y)	        x に続いて y が現れない場合、x にマッチ
+　　(?<=x)y	        x に続いて y が現れる場合、y にマッチ。(ES2018～)
+　　(?<!x)y	        x に続いて y が現れない場合、y にマッチ。(ES2018～)
+
+
+
+バックスラッシュ（\）に続く文字は
+　表現　　　　　    意味
+　　0	              NUL 文字。
+　　b	              単語の区切り文字。
+　　B	              b以外の文字
+　　cX	            Ctrl-X。X には A-Z の何れかの文字が入る。
+　　d	              半角数字。[0-9]と同じ。
+　　D	              d 以外の文字。[^0-9]と同じ。
+　　f	              改ページ(FF:Form-feed)。
+　　n	              改行文字(LF:Line feed)。
+　　r	              復帰文字(CR:Carriage return)。
+　　s	              1文字の区切り文字。空白文字( )、改ページ(f)、改行(n)、ラインフィード(r)、タブ文字(r)、垂直タブ(v)、No-break space(u00a0)、Ogham space mark(u1680)、Mongolian vowel separator(　　u180e)、Xxx Quad(u2000-u2001)、Xxx Space(u2002-u200a)、Line separator(　　u2028)、Paragraph separator(　　u2029)、Narrow no-break space(u202f)、Medium mathematical space(u205f)、全角スペース(u3000)、BOM(ufeff) いずれかの 1文字。[ f　n　r　t　v　u00a0　u1680　u180e　u2000-　u200a　u2028　u2029　u202f　u205f　u3000　　ufeff] と同じ。
+　　S	              s以外の1文字
+　　t	              水平タブ(HT:Horozontal tab)。
+　　v	              垂直タブ(VT:Vertical tab)。
+　　w	              アンダーバー(_)を含む半角英数文字。[A-Za-z0-9_]と同じ。
+　　W	              w以外の文字。[^A-Za-z0-9_]と同じ。
+　　n	              n番目の (...) にマッチした文字列
+　　ohhh	          8進数で hhh の文字。(非推奨)
+　　xhh	            16進数で hh の文字
+　　uhhhh	          UTF-16 Unicode文字。
+　　u{hhhh}	        g フラグ指定時のみ利用可能。非サロゲートペア領域の UTF-16 Unicode文字。
+　　u{hhhhh}	      g フラグ指定時のみ利用可能。サロゲートペア領域の UTF-16 Unicode文字。
+　　p{property}   	Unicodeで、Binaryプロパティに propety を持つ文字。(要 uフラグ) (ES2018～)
+　　p{gc=property}	Unicodeで、General_Category に propety を持つ文字。(要 uフラグ) (ES2018～)
+　　p{sc=property}	Unicodeで、Script が propety にマッチする文字。(要 uフラグ) (ES2018～)
+　　p{scx=property}	Unicodeで、Script_Extensions が propety にマッチする文字。(要 uフラグ) (ES2018～)
+　　P{property}	    Unicodeで、Binaryプロパティに propety を持たない文字。(要 uフラグ) (ES2018～)
+　　P{gc=property}	Unicodeで、General_Category に propety を持たない文字。(要 uフラグ) (ES2018～)
+　　P{sc=property}	Unicodeで、Script が propety にマッチしない文字。(要 uフラグ) (ES2018～)
+　　P{scx=property}	Unicodeで、Script_Extensions が propety にマッチしない文字。(要 uフラグ) (ES2018～)
+　　その他	         その他の文字自身
+
+
+フラグ
+　フラグ	　　フラグ名	　　　　意味
+　　g	　　　　　global	        2番目、3番目... にマッチする部分も検索する
+　　i	　　　　　ignoreCase	    大文字・小文字を区別しない
+　　m　　　　　	multiline	      複数行に対して検索する
+　　u	　　　　　unicode	        Unicodeのサロゲーションペア文字も1文字として扱う
+　　y	　　　　　sticky	        lastIndex で指定した位置からのみ検索する
+　　s	　　　　　dotAll	        ピリオド(.)が CR, LF, U+2028, U+2029 を含め、すべての文字にマッチする (ES2018～)
+　　d	　　　　　hasIndices	    マッチ文字列の先頭・終了インデックスを返却する (ES2022～)
+
+
+よく使うメソッド
+match,　replace,  search,   test.
