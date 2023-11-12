@@ -23,17 +23,17 @@ function timeForMilkAndCookies(
   if (
     typeof years != "number" ||
     typeof months != "number" ||
-    typeof dates != "number" ||
-    years === 0 ||
-    months === 0 ||
-    dates === 0
+    typeof dates != "number"
   ) {
     return "Enter number here, please!";
-  } else if (years != 0 && months != 0 && dates != 0) {
-    if (months === 11 && dates === 24) {
-      return (isChristmas = true);
-    }
   }
+  if (years === 0 || months === 0 || dates === 0) {
+    return "Please fill in the correct data.";
+  }
+  if (months === 11 && dates === 24) {
+    return (isChristmas = true);
+  }
+
   return isChristmas;
 }
 
@@ -47,12 +47,11 @@ class date {
     if (
       typeof this.year != "number" ||
       typeof this.month != "number" ||
-      typeof this.date != "number" ||
-      this.year === 0 ||
-      this.month === 0 ||
-      this.date === 0
+      typeof this.date != "number"
     ) {
       return "Enter number here, please!";
+    } else if (this.year === 0 || this.month === 0 || this.date === 0) {
+      return "Please fill in the correct data.";
     }
     switch (this.month) {
       case 11:
