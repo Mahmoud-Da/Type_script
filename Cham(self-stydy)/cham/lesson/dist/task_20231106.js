@@ -19,9 +19,6 @@ class date {
         this.year = year;
         this.month = month;
         this.date = date;
-        this.year = year;
-        this.month = month;
-        this.date = date;
     }
     is_christmas() {
         if (typeof this.year != "number" ||
@@ -29,18 +26,13 @@ class date {
             typeof this.date != "number") {
             return "Enter number here, please!";
         }
-        else if (this.year === 0 || this.month === 0 || this.date === 0) {
+        if (this.year === 0 || this.month === 0 || this.date === 0) {
             return "Please fill in the correct data.";
         }
-        switch (this.month) {
-            case 11:
-                if (this.date === 24) {
-                    return true;
-                }
-                break;
-            default:
-                return false;
+        if (this.month === 11 && this.date === 24) {
+            return true;
         }
+        return false;
     }
 }
 let Date1 = new date(2013, 11, 24);
