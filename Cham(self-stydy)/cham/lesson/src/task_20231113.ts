@@ -11,7 +11,7 @@
 // Write a function that takes a list of strings an prints them, one per line, in a rectangular frame.
 // For example the list ["Hello", "World", "in", "a", "frame"] gets printed as:
 
-function strings(...args: string[]): string | string[] {
+function listString(...args: string[]): string | string[] {
   if (typeof args !== "string" && args.length === 0) {
     return "文字を記入してください。";
   }
@@ -24,5 +24,5 @@ function strings(...args: string[]): string | string[] {
 }
 
 //test
-strings("anh", "ban", "toi");
-strings();
+listString("anh", "ban", "toi");
+listString();
