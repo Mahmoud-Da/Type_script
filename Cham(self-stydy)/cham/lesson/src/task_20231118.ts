@@ -16,28 +16,30 @@
 // The function takes an integer as parameter and returns a list of integers (ObjC: array of NSNumbers representing integers).
 // That list contains the prime factors in numerical sequence.
 
-function integers(number: number): number[] | string {
-  if (number === 1 || typeof number != "number") {
-    return "Enter number greater than 1 in here, please!";
+function primeFactors(number: number): number[] | string {
+  if (!number) {
+    return "Enter number in here, please!";
   }
-  let integer: number[] = [];
-  for (let i = 2; i < number; i++) {
-    if (i + 1 === number) {
-      return integer;
-    }
-    for (let j = number % i; j < number; j++) {
-      if (j === 0) {
-        result = integer.splice(integer.length, 0, i);
-      }
+  let factors: number[] = [];
+  if (number === 1) {
+    return factors;
+  }
+  let divisor: number = 2;
+  while (number >= 2) {
+    if (number % divisor == 0) {
+      number = number / divisor;
+      factors.push(divisor);
+    } else {
+      divisor++;
     }
   }
-  return result;
+  return factors;
 }
 
 // test
-integers(1);
-integers(3);
-integers(6);
-integers(8);
-integers(25);
-integers(99);
+primeFactors(1);
+primeFactors(3);
+primeFactors(6);
+primeFactors(8);
+primeFactors(9);
+primeFactors(12);
